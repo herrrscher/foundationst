@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Sidebar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.6/dist/css/foundation.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.6/dist/js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            height: 100%;
+            padding-top: 20px;
+            position: fixed; 
+            left: 0;
+            top: 0;
+            bottom: 0;
+            overflow-y: auto; 
+        }
+
+        .sidebar img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .menu li a {
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .sidebar .menu li a:hover {
+            background-color: #e1e1e1;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        @media screen and (max-width: 64em) {
+            .sidebar {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .show-for-medium {
+                display: block;
+            }
+        }
+
+        
+        .profile-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-container img {
+            max-width: 150px; 
+            margin-right: 20px; 
+        }
+
+        .profile-details {
+            flex-grow: 1;
+        }
+
+       
+        .grid-x.profile-grid {
+            margin-left: 270px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <ul class="menu vertical">
+            <li><a href="#">Materials</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">Progress</a></li>
+            <li><a href="#">Statistics</a></li>
+            <li><a href="#">Testing</a></li>
+            <li><a href="#">Meetings</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+
+        <div class="log-out-container">
+            <ul class="menu vertical">
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid-x align-middle profile-grid">
+        <div class="cell auto">
+            <div class="profile-container">
+                
+                <img src="ugly.png" alt="Profile Picture">
+
+                
+                <div class="profile-details">
+                    <button class="button show-for-medium" id="toggleSidebar">Open Sidebar</button>
+                    <h3>new student</h3>
+                    <h1>gabriela richardson</h1>
+
+                    <div class="grid-x">
+                        <div class="cell small-6">
+                            <p>school: harvey mudd college california</p>
+                        </div>
+                        <div class="cell small-6">
+                            <p>age: 15</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-x">
+                        <div class="cell small-6">
+                            <p>mother: tyrell mccaffrey</p>
+                        </div>
+                        <div class="cell small-6">
+                            <p>father: usman rankin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid-container">
+                
+                <div class="small-12 medium-8 large-6 columns">
+                  
+                  <div class="progress" style="height: 10px;">
+                    <span class="progress-meter" style="width: 20%;"></span>
+                  </div>
+                </div>
+                
+                <p>Sport</p>
+              </div>
+
+              <div class="grid-container">
+                
+                <div class="small-12 medium-8 large-6 columns">
+                  
+                  <div class="progress" style="height: 10px;">
+                    <span class="progress-meter" style="width: 70%;"></span>
+                  </div>
+                </div>
+                
+                <p>reading</p>
+              </div>
+
+              <div class="grid-container">
+                
+                <div class="small-12 medium-8 large-6 columns">
+                  
+                  <div class="progress" style="height: 10px;">
+                    <span class="progress-meter" style="width: 38%;"></span>
+                  </div>
+                </div>
+                
+                <p>tech</p>
+              </div>
+
+              <div class="grid-container">
+                
+                <div class="small-12 medium-8 large-6 columns">
+                  
+                  <div class="progress" style="height: 10px;">
+                    <span class="progress-meter" style="width: 97%;"></span>
+                  </div>
+                </div>
+                
+                <p>arts</p>
+              </div>
+
+              <div class="grid-container">
+                
+                <div class="small-12 medium-8 large-6 columns">
+                  
+                  <div class="progress" style="height: 10px;">
+                    <span class="progress-meter" style="width: 48%;"></span>
+                  </div>
+                </div>
+                
+                <p>science</p>
+              </div>
+
+              <div class="grid-container">
+                
+              
+              
+        </div>
+   
+
+
+    </div> 
+    
+    <div class="container">
+        <div class="grid-x align-items-start">
+            <div class="cell text-right">
+                <h1>social contacts</h1>
+                <img src="woman1.png">
+                <p>sade W.</p>
+                <img src="man1.png">
+                <p>alex T.</p>
+                <img src="woman2.png">
+                <p>ayaan.</p>
+            </div>
+        </div>
+    </div>
+    
+                
+          
+        
+      
+
+    
+
+    <script>
+        $(document).ready(function() {
+            $('#toggleSidebar').click(function() {
+                $('.sidebar').toggle();
+            });
+        });
+    </script>
+</body>
+</html>
